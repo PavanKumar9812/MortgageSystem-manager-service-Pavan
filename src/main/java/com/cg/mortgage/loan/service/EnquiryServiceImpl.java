@@ -17,6 +17,15 @@ public class EnquiryServiceImpl implements EnquiryService
 	@Autowired
 	private enquiryRepository enquiryRepository;
 	
+	/****************************************************************************************************************************
+	 - Method Name      : getAllEnquiry
+	 - Input Parameters : Enquiry entity
+	 - Return type      : List
+	 - Author           : Pavan Kumar Meharwade
+	 - Creation Date    : 08-03-2022
+	 - Description      : fetching the Enquiry information entered by admin into  the database.
+	  ****************************************************************************************************************************/ 
+	
 	
 	@Override
 	public List<Enquiry> getAllEnquiry(){
@@ -27,11 +36,31 @@ public class EnquiryServiceImpl implements EnquiryService
 	}
 	
 
+/****************************************************************************************************************************
+ - Method Name      : saveEnquiry
+ - Input Parameters : Enquiry entity
+ - Return type      : Enquiry
+ - Author           : Pavan Kumar Meharwade
+ - Creation Date    : 08-03-2022
+ - Description      : Saving the Enquiry information entered by admin into  the database.
+  ****************************************************************************************************************************/ 
+
 	@Override
 	public Enquiry saveEnquiry(Enquiry enquiry) {
 		Enquiry saveEnquiry = enquiryRepository.save(enquiry);
 		return saveEnquiry;
 	}
+
+	
+	/****************************************************************************************************************************
+	 - Method Name      : updateEnquiry
+	 - Input Parameters : Enquiry entity
+	 - Return type      : Enquiry
+	 - Author           : Pavan Kumar Meharwade
+	 - Creation Date    : 08-03-2022
+	 - Description      : Updating the Enquiry information entered by admin into  the database.
+	  ****************************************************************************************************************************/ 
+	
 	
 	@Override
 	public Enquiry updateEnquiry( Enquiry enquiry) {
